@@ -1,0 +1,49 @@
+.block-title {
+  display: flex;
+  align-items: center;
+
+  .reset-indents();
+
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: @bright-font-color;
+
+  &::after {
+    content: "";
+
+    width: 100%;
+    height: 1px;
+    margin-left: 25px;
+
+    background-color: @bright-background-color;
+  }
+
+  span {
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .block-title {
+    width: 167px;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .block-title {
+    display: block;
+
+    box-sizing: border-box;
+
+    width: 175px;
+
+    padding-left: 62px;
+  }
+}
+
